@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: ice-cream-service
 spec:
-  selector:
-    app: ice-cream-app
   ports:
-    - protocol: TCP
-      port: 80
+    - port: 80
       targetPort: 80
-  type: LoadBalancer
+      protocol: TCP
+      nodePort: 30001
+  selector:
+    app: ice-cream-service
+  type: NodePort
