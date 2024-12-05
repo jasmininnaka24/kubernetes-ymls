@@ -6,6 +6,11 @@ metadata:
     name: ice-cream-pod
     app: ice-cream-app
 spec:
+  tolerations:
+  - key: "node-role.kubernetes.io/control-plane"
+    operator: "Equal"
+    value: ""
+    effect: "NoSchedule"
   containers:
     - name: ice-cream-app
       image: ghcr.io/jasmininnaka24/project-simulation-pipeline-container:latest
