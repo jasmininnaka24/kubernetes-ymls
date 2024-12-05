@@ -2,13 +2,11 @@ apiVersion: v1
 kind: Service
 metadata:
   name: ice-cream-service
-  labels:
-    name: ice-cream-service
-    app: ice-cream-app
 spec:
-  ports:
-    - port: 80
-      targetPort: 80
   selector:
-    name: ice-cream-pod
     app: ice-cream-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
