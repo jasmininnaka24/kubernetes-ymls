@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: result-pod
+  labels:
+    name: result-pod
+    app: result-app
+spec:
+  containers:
+    - name: result-app
+      image: ghcr.io/jasmininnaka24/project-simulation-pipeline-container:latest
+      port:
+        - containerPort: 80
