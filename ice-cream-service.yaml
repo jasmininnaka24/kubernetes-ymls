@@ -9,5 +9,5 @@ spec:
       protocol: TCP
       nodePort: 30001
   selector:
-    app: ice-cream-service
+    app: ice-cream-app
   type: NodePort
