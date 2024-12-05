@@ -9,5 +9,5 @@ spec:
   containers:
     - name: ice-cream-app
       image: ghcr.io/jasmininnaka24/project-simulation-pipeline-container:latest
-      port:
+      ports:
         - containerPort: 80
