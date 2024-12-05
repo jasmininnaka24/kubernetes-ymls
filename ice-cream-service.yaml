@@ -5,8 +5,9 @@ metadata:
 spec:
   ports:
     - port: 80
-      targetPort: 80 # Match the container port
+      targetPort: 80
       protocol: TCP
+      nodePort: 30080 # Optional: specify a custom nodePort
   selector:
     app: ice-cream-app
-  type: LoadBalancer
+  type: NodePort
