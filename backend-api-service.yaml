@@ -11,5 +11,3 @@ spec:
       targetPort: 8080 # Port your container listens to (from your ReplicaSet)
   type: ClusterIP # Internal access only (default)
 
-
-  

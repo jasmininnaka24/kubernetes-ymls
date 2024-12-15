@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend-api
-          image: nginx:v1 # Sample docker image of the backend API server
+          image: nginx # Sample docker image of the backend API server
           ports:
             - containerPort: 8080 # Port the backend API listens to
 
