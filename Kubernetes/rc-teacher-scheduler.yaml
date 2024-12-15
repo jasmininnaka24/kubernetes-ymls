@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: my-backend-api-replicaset # Name of the ReplicaSet
+spec:
+  replicas: 3 # Desired number of backend API instances (pods)
+  selector:
+    matchLabels:
+      app: my-backend-api # Select pods with this label (they are the backend servers)
+  template:
+    metadata:
+      labels:
+        app: my-backend-api # Label for the pods (API servers)
+    spec:
+      containers:
+        - name: backend-api
+          image: nginx:v1 # Sample docker image of the backend API server
+          ports:
+            - containerPort: 8080 # Port the backend API listens to
+
